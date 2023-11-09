@@ -2,7 +2,7 @@ from getpass import getpass
 import os
 import time
 import msvcrt
-import ctypes # pip install windows-curses
+import ctypes
 import curses
 import datetime
 from enum import Enum
