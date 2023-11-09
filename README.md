@@ -1,63 +1,83 @@
-# PyTermX
+# ConsoleX
 
-PyTermX is a custom Python console with advanced features.
-
-## Installation
-
-You can install PyTermX using pip:
-pip install pytermx
-
-This will start the PyTermX console, where you can enter Python code and see the output.
+ConsoleX is a Python library for enhancing console interactions. It provides a variety of features such as colored text, styled text, console window manipulation, and more.
 
 ## Features
 
-PyTermX includes the following features:
+- Colored and styled text output
+- Console window manipulation (clear, resize, move, hide/show)
+- User input and confirmation
+- Progress bar display
+- Alert messages
+- Logging with different levels
 
-- **Syntax highlighting**
-- **Autocomplete**
-- **Command history**
-- **Multi-line input**
-- **Customizable prompt**
-- And more!
+## Installation
 
-## Usage
+As this project is not on PyPI, you can install it by cloning the repository and installing it manually.
 
-To use the `ConsoleX` class in your Python code, you can import it from the `console.py` file:
+```bash
+git clone https://github.com/User319183/ConsoleX.git
+cd ConsoleX
+python setup.py install
+```
 
 ```python
 from console import ConsoleX
 
-# Create a new ConsoleX object
 console = ConsoleX()
 
-# Print text in different colors
-console.print("This text is red", fg="red")
-console.print("This text is green", fg="green")
-console.print("This text is yellow", fg="yellow")
-console.print("This text is blue", fg="blue")
-console.print("This text is magenta", fg="magenta")
-console.print("This text is cyan", fg="cyan")
-console.print("This text is white", fg="white")
+# print colored text
+console.print("Hello, World!", fg="green")
 
-# Print text with different backgrounds
-console.print("This text has a black background", bg="black")
-console.print("This text has a red background", bg="red")
-console.print("This text has a green background", bg="green")
-console.print("This text has a yellow background", bg="yellow")
-console.print("This text has a blue background", bg="blue")
-console.print("This text has a magenta background", bg="magenta")
-console.print("This text has a cyan background", bg="cyan")
-console.print("This text has a white background", bg="white")
+# display a progress bar
+console.progress("Loading", length=50, delay=0.1)
 
-# Print text with different styles
-console.print("This text is dim", style="dim")
-console.print("This text is normal", style="normal")
-console.print("This text is bright", style="bright")
+# log a message
+console.log("This is a debug message", LogLevel.DEBUG)
+
+# clear the console
+console.clear()
+
+# set the console title
+console.title("My Console")
+
+# set the console size
+console.size(80, 24)
+
+# move the console window
+console.move(100, 100)
+
+# hide the console
+console.hide()
+
+# show the console
+console.show()
+
+# get user input
+input = console.input("Enter something: ")
+
+# pause the console
+console.pause()
+
+# confirm an action with the user
+confirmation = console.confirm("Are you sure? (y/n)")
+
+# display an alert
+console.alert("Alert", "This is an alert message", style="warning")
 ```
 
 This will allow you to print colored text to the console in Python. You can also use other methods of the `ConsoleX` class to clear the console, set the console title, get user input, and more.
 
 
+## Future Updates
+
+Coming soon with new features & improved preformance.
+
 ## License
 
-PyTermX is licensed under the **MIT License**. See the `LICENSE` file for more information.
+This project is licensed under the MIT License.
+
+## Contact
+
+For any inquiries, please open an issue on the GitHub repository.
+
