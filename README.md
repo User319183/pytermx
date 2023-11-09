@@ -16,8 +16,8 @@ ConsoleX is a Python library for enhancing console interactions. It provides a v
 As this project is not on PyPI, you can install it by cloning the repository and installing it manually.
 
 ```bash
-git clone https://github.com/User319183/ConsoleX.git
-cd ConsoleX
+git clone https://github.com/User319183/pytermx.git
+cd pytermx
 python setup.py install
 ```
 
