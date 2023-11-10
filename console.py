@@ -133,18 +133,18 @@ class ConsoleX:
         """Logs a message with a given log level."""
         current_time = datetime.datetime.now().strftime("%H:%M:%S")
         if level == LogLevel.SUCCESS:
-            symbol = "INF "
-            color = "green"
+            symbol = "INF ✅ "
+            color = "pink"
         elif level == LogLevel.ERROR:
-            symbol = "x "
+            symbol = "❌ "
             color = "red"
         elif level == LogLevel.DEBUG:
             symbol = "DBG "
-            color = "yellow"
+            color = "❗ "
         elif level == LogLevel.INFO:
-            symbol = "DBG "
-            color = "magenta"
-        else:
-            symbol = "? "
+            symbol = "INFO ❓ "
             color = "cyan"
+        else:
+            symbol = "❓ "
+            color = "magenta"
         self.print(f"[{current_time}] {symbol} {message}", fg=color)
