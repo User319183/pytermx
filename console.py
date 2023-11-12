@@ -85,9 +85,15 @@ class ConsoleX:
             text = f"{STYLES[style]}{text}"
         print(f"{text}{self.reset}", end=end)
 
-    def input(self, text):
+    def input(self, text, fg=None, bg=None, style=None):
         """Gets user input."""
-        return input(text)
+        if fg and fg in COLORS:
+            text = f"{COLORS[fg]}{text}"
+        if bg and bg in BACKGROUNDS:
+            text = f"{BACKGROUNDS[bg]}{text}"
+        if style and style in STYLES:
+            text = f"{STYLES[style]}{text}"
+        return input(f"{text}{self.reset}")
 
     def pause(self, text="Press any key to continue..."):
         """Pauses the console."""
@@ -139,8 +145,8 @@ class ConsoleX:
             symbol = "❌ "
             color = "red"
         elif level == LogLevel.DEBUG:
-            symbol = "DBG "
-            color = "❗ "
+            symbol = "DBG 🐛 "
+            color = "magenta"
         elif level == LogLevel.INFO:
             symbol = "INFO ❓ "
             color = "cyan"
