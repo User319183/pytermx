@@ -1,6 +1,6 @@
-# ConsoleX
+# PyTermX
 
-ConsoleX is a Python library for enhancing console interactions. It provides a variety of features such as colored text, styled text, console window manipulation, and more.
+PyTermX is a Python library for enhancing console interactions. It provides a variety of features such as colored text, styled text, console window manipulation, and more.
 
 ## Features
 
