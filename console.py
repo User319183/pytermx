@@ -50,10 +50,7 @@ class ConsoleX:
 
     def clear(self):
         """Clears the console."""
-        curses.setupterm()
-        clear_str = curses.tigetstr("clear")
-        if clear_str is not None:
-            print(clear_str.decode(), end="")
+        os.system("cls" if os.name == "nt" else "clear")
 
     def title(self, title):
         """Sets the console title."""
